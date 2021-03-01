@@ -26,7 +26,7 @@ for (( i = 0; i <= 4 ; i++ ))
 do
    for (( j = $i; j <= 4; j++ ))
    do
-      if [ ${array[$i]} -lt ${array[$j]}  ]; then
+      if [ ${array[$i]} -gt ${array[$j]}  ]; then
            t=${array[$i]}
            array[$i]=${array[$j]}
            array[$j]=$t
@@ -35,7 +35,7 @@ do
 done
 
 
-echo -e "\nSorted Numbers in Descending Order:"
+echo -e "\nSorted Numbers in Ascending Order:"
 for (( i=0; i <= 4; i++ )) 
 do
   echo ${array[$i]}
